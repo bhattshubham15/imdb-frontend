@@ -77,10 +77,10 @@ export default class Movies extends Component {
                     {
                         this.props.isEdit &&
                         <div>
-                            <Fab size="small" color="primary" aria-label="add">
-                                <DeleteIcon onClick={() => this.handleDelete(this.props.item.id)} />
+                            <Fab size="small" color="primary" aria-label="add" onClick={() => this.handleDelete(this.props.item.id)}>
+                                <DeleteIcon />
                             </Fab>
-                            <Link to={{pathname: "/update-movie", id: this.props.item.id}} id={this.props.item.id}>
+                            <Link to={{ pathname: "/update-movie", id: this.props.item.id }} id={this.props.item.id}>
                                 <Fab size="small" color="secondary" aria-label="edit">
                                     <EditIcon />
                                 </Fab>
