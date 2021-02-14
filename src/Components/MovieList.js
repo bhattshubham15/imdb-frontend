@@ -60,7 +60,7 @@ export default class MovieList extends Component {
                 searchText: e.target.value
             }
         }, async () => {
-            const movies = await getMovieList(this.state.page, this.state.search);
+            const movies = await getMovieList(null, this.state.search);
             if (movies) {
                 this.setState({
                     movies: movies.data,
@@ -79,7 +79,7 @@ export default class MovieList extends Component {
                 dropdownSearch: value
             }
         }, async () => {
-            const movies = await getMovieList(this.state.page, this.state.search);
+            const movies = await getMovieList(null, this.state.search);
             if (movies) {
                 this.setState({
                     movies: movies.data,
